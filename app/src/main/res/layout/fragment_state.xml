@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true" >
+        <GridView
+            android:id="@+id/iv"
+
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+
+            />
+    </ScrollView>
+    <RelativeLayout
+        android:id="@+id/mycharge"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/blue">
+
+        <TextView
+            android:id="@+id/textview1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="实时动态"
+            android:textColor="#F4F4F4"
+            android:textSize="20dip" />
+
+
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:id="@+id/statusinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mycharge"
+        android:text="未充电"
+        android:textSize="30sp"
+        android:layout_marginTop="20dp"
+        android:textColor="#7A8B8B"
+        android:layout_centerHorizontal="true"
+
+        />
+    <LinearLayout
+
+        android:orientation="horizontal"
+        android:id="@+id/infoline1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/statusinfo"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        >
+        <TextView
+            android:id="@+id/tvcdnumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#7A8B8B"
+            android:text="电桩编号:"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tvcdnumber1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#7A8B8B"
+            android:layout_marginLeft="5dp"
+            android:text="没有数据"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:orientation="vertical"
+        android:id="@+id/infoline2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/infoline1"
+        android:layout_marginTop="15dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvcdcost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textColor="#436EEE"
+            android:text="充电金额" />
+
+        <TextView
+            android:id="@+id/tvcdcost1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="50sp"
+            android:textColor="#436EEE"
+            android:text="0" />
+    </LinearLayout>
+    <LinearLayout
+
+        android:orientation="horizontal"
+        android:id="@+id/infoline3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/infoline2"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/tvcdtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="充电时长:"
+            android:textColor="#7A8B8B"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tvcdtime1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textColor="#7A8B8B"
+            android:text="没有数据"
+            android:textSize="20sp" />
+    </LinearLayout>
+    <LinearLayout
+
+        android:orientation="horizontal"
+        android:id="@+id/infoline4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/infoline3"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/tvcdamount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已充电量:"
+            android:textColor="#7A8B8B"
+
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/tvcdamount1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="没有数据"
+            android:textColor="#7A8B8B"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+
+
+    <ImageView
+        android:id="@+id/stopimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/stoptv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:onClick="stop"
+        android:src="@drawable/stop" />
+    <TextView
+        android:id="@+id/stoptv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="停止充电"
+        android:textSize="20sp"
+        android:layout_marginBottom="50dp"
+        android:layout_centerHorizontal="true">
+
+    </TextView>
+
+</RelativeLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/map_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/blue" >
+
+        <!-- Two dimensional code scanning -->
+        <ImageView
+            android:id="@+id/erweima"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/erweima_scanning" />
+
+        <EditText
+            android:id="@+id/searchcity"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/charge_status"
+            android:layout_margin="5dp"
+            android:layout_toLeftOf="@+id/searchimg"
+            android:layout_toRightOf="@+id/erweima"
+
+            android:background="@drawable/bg_mapedittext"
+            android:hint="输入需要查找的城市"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/searchimg"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="20dip"
+            android:layout_marginRight="5dp"
+            android:text="搜索" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/map_title">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.baidu.mapapi.map.MapView
+                android:id="@+id/bmapView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                />
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/location"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginLeft="20dp"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical" >
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    >
+    <FrameLayout
+        android:id="@+id/realtabcontent"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <FrameLayout
+        android:id="@+id/map_hide"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+        <FrameLayout
+            android:visibility="invisible"
+            android:id="@+id/include_charge"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <include layout="@layout/fragment_charge"/>
+        </FrameLayout>
+        <FrameLayout
+            android:visibility="invisible"
+            android:id="@+id/include_state"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <include layout="@layout/fragment_state"/>
+        </FrameLayout>
+        <FrameLayout
+            android:visibility="invisible"
+            android:id="@+id/include_account"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <include layout="@layout/fragment_account"/>
+        </FrameLayout>
+        <FrameLayout
+            android:visibility="invisible"
+            android:id="@+id/include_map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <include layout="@layout/fragment_map_bg"/>
+        </FrameLayout>
+    </FrameLayout>
+</RelativeLayout>
+
+
+    <android.support.v4.app.FragmentTabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff">
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0" />
+    </android.support.v4.app.FragmentTabHost>
+
+</LinearLayout>
