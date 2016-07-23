@@ -25,14 +25,6 @@ public class WelcomeActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
         SDKInitializer.initialize(getApplicationContext());
-        // 推送设置
-        /*PushReceiver receiver = new PushReceiver();
-        IntentFilter filter = new IntentFilter();
-        String action = "com.igexin.sdk.action.4vpjq6XBG1AidyVf6t1xK1";
-        filter.addAction(action);
-        filter.setPriority(IntentFilter.SYSTEM_HIGH_PRIORITY);
-        registerReceiver(receiver, filter);*/
-
 
         ThreadManager.THREAD_POOL_EXECUTOR.execute(new Runnable() {
             @Override
@@ -52,7 +44,7 @@ public class WelcomeActivity extends Activity {
                                     Toast.makeText(WelcomeActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
                                 }
                             });
-                            startActivity(new Intent(WelcomeActivity.this,HomeActivity.class));
+                            startActivity(new Intent(WelcomeActivity.this,HomePageActivity.class));
                             finish();
                         } else {
                            runOnUiThread(new Runnable() {
@@ -62,7 +54,7 @@ public class WelcomeActivity extends Activity {
                                }
                            });
 
-                            Intent intent = new Intent(WelcomeActivity.this,HomeActivity.class);
+                            Intent intent = new Intent(WelcomeActivity.this,HomePageActivity.class);
                             startActivity(intent);
                             finish();
                         }
@@ -115,7 +107,7 @@ public class WelcomeActivity extends Activity {
         map.put("password", password);
         Log.e("LoginActivity", "名称  密码" + username + password);
 
-        String url= HttpUtil.TEST_BASE_URL+"loginAction";
+        String url= HttpUtil.OLD_URL +"loginAction";
         Log.e("LoginActivity", url);
 
         return new JSONObject(HttpUtil.postRequest(url, map));

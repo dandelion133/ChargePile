@@ -8,4 +8,5 @@
     <string name="soft_update_later">稍后更新</string>
     <string name="soft_updating">正在更新</string>
     <string name="soft_update_cancel">取消</string>
+    <string name="scan_text">将二维码放入框内, 即可自动扫描</string>
 </resources>

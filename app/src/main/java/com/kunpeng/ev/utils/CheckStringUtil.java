@@ -22,7 +22,7 @@ public class CheckStringUtil {
     }
 
     //是否数字（不包含小数点）
-    public static boolean is_number(String number) {
+    public static boolean isNumber(String number) {
         if (number == null)
             return false;
         return number.matches("[+-]?[1-9]+[0-9]*(\\.[0-9]+)?");

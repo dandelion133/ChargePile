@@ -23,6 +23,7 @@ import com.kunpeng.ev.fragment.AccountFragment;
 import com.kunpeng.ev.fragment.ChargeFragment;
 import com.kunpeng.ev.fragment.MapFragment;
 import com.kunpeng.ev.fragment.StateFragment;
+import com.kunpeng.ev.manage.ThreadManager;
 import com.kunpeng.ev.ui.TabIndicatorView;
 
 public class HomeActivity extends AppCompatActivity {
@@ -70,6 +71,7 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.e(TAG,"HomeActivity");
         setContentView(R.layout.activity_home);
         getWindow().setFormat(PixelFormat.TRANSLUCENT);
         instance = this;
@@ -190,8 +192,9 @@ public class HomeActivity extends AppCompatActivity {
                 if (tabId.equals(mTextviewArray[0])) {
                     mRealtabcontent.setVisibility(View.VISIBLE);
                     mTabIndicatorView[0].setTabSelected(true);
-                   mIncludeMap.setVisibility(View.VISIBLE);
+                    mIncludeMap.setVisibility(View.VISIBLE);
                     isFirstTabSelected = true;
+                    setTabSelect(true);
                 } else {
                     //百度地图BUG 掩盖掉黑边
                     if(isFirstTabSelected) {
@@ -212,6 +215,7 @@ public class HomeActivity extends AppCompatActivity {
                         mIncludeAccount.setVisibility(View.VISIBLE);
                         mTabIndicatorView[3].setTabSelected(true);
                     }
+                    setTabSelect(false);
                 }
             }
         });
@@ -222,12 +226,12 @@ public class HomeActivity extends AppCompatActivity {
     public void setTabSelect(boolean isMap) {
 
             if(isMap) {
-                new Thread(new Runnable() {
+                ThreadManager.THREAD_POOL_EXECUTOR.execute(new Runnable() {
                     @Override
                     public void run() {
 
                         try {
-                            Thread.sleep(500);
+                            Thread.sleep(600);
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
@@ -235,22 +239,24 @@ public class HomeActivity extends AppCompatActivity {
                         Message message = Message.obtain();
                         message.what = HIDE;
                         mHandler.sendMessage(message);
-
-                        /*mMapHide.setVisibility(View.INVISIBLE);
-                        mIncludeCharge.setVisibility(View.INVISIBLE);
-                        mIncludeState.setVisibility(View.INVISIBLE);
-                        mIncludeAccount.setVisibility(View.INVISIBLE);
-                        mIncludeMap.setVisibility(View.INVISIBLE);
-                        mRealtabcontent.setVisibility(View.VISIBLE);*/
                     }
-                }).start();
+                });
             } else {
-                mMapHide.setVisibility(View.INVISIBLE);
-                mIncludeCharge.setVisibility(View.INVISIBLE);
-                mIncludeState.setVisibility(View.INVISIBLE);
-                mIncludeAccount.setVisibility(View.INVISIBLE);
-                mIncludeMap.setVisibility(View.INVISIBLE);
-                mRealtabcontent.setVisibility(View.VISIBLE);
+                ThreadManager.THREAD_POOL_EXECUTOR.execute(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        try {
+                            Thread.sleep(100);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+
+                        Message message = Message.obtain();
+                        message.what = HIDE;
+                        mHandler.sendMessage(message);
+                    }
+                });
             }
 
 

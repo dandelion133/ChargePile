@@ -34,6 +34,9 @@ public class TabIndicatorView extends RelativeLayout {
 
 
     }
+
+
+
     public void setTabSelected(boolean selected) {
         if (selected) {
             mIcon.setImageResource(focusIconId);

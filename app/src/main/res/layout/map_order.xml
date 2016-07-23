@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/order"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eee">
+
+    <RelativeLayout 
+       android:id="@+id/title"
+       android:layout_width="match_parent"
+       android:layout_height="50dp"
+       android:background="@color/blue">
+
+         <TextView
+             android:id="@+id/textview0"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerHorizontal="true"
+             android:layout_centerVertical="true"
+             android:text="预约"
+             android:textColor="#F4F4F4"
+             android:textSize="20dip" />
+
+     </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/choose"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+
+    <Button
+        android:id="@+id/choose1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="28dp"
+        android:text="预约时间"
+        android:textSize="20dp" />
+    <TextView  android:id = "@+id/spinnertime" 
+        android:layout_below="@+id/spinner1"   
+        android:layout_width = "wrap_content"     
+        android:layout_height = "wrap_content" 
+        android:layout_marginTop="10dp" 
+         android:layout_marginLeft="20dp"
+        android:textSize="15dp"   
+        android:text = ""    />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:layout_centerHorizontal="true" />
+
+ </RelativeLayout>
+        "
+  <RelativeLayout
+        android:id="@+id/middle"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/choose" 
+        android:background="#fff">
+
+        <TextView
+            android:id="@+id/textview1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:textSize="20dp"
+            android:text="预约开始时间："
+            android:textColor="#000" />
+        <EditText 
+        android:id="@+id/inputDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/textview1"
+        android:layout_marginTop="15dp"
+        android:background="#fff"
+        android:textColor="#EEAD0E"
+        android:focusable="false"
+        android:inputType="none"/>
+
+        <TextView
+            android:id="@+id/textview2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textview1"
+            android:layout_below="@+id/textview1"
+            android:layout_marginTop="15dp"
+            android:textSize="20dp"
+            android:text="预约费用："
+            android:textColor="#000" />
+        <TextView
+            android:id="@+id/textview22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_alignRight="@+id/inputDate"
+            android:layout_below="@+id/textview1"
+            android:layout_toRightOf="@+id/textview2"
+            android:layout_marginTop="15dp"
+            android:textColor="#FF0000"
+            android:textSize="20dp"
+            android:text="0元"
+             />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textview2"
+            android:layout_below="@+id/textview2"
+            android:layout_marginTop="15dp"
+            android:textSize="20dp"
+            android:text="电桩编号："
+            android:textColor="#000" />
+
+    </RelativeLayout>
+    
+  <Button 
+      android:id="@+id/ordernow"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/middle"
+        android:text="立即预约"
+        android:background="@color/blue"
+        android:textSize="20dp" />
+		    
+           
+
+</RelativeLayout>
+

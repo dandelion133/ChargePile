@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/chargemoney"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eee">
+    
+      <EditText
+           android:id="@+id/writemoney"
+           android:layout_width="match_parent"
+           android:layout_height="48dp"
+           android:layout_marginTop="20dp"
+           android:layout_marginLeft="10dp"
+           android:layout_marginRight="10dp"
+           android:paddingLeft="4dp"
+           android:background="@drawable/bg_edittext"
+           android:hint="请输入充值金额"
+           android:singleLine="true"
+           android:inputType="number"/>
+       <TextView
+             android:id="@+id/textviewzhifubao"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_below="@+id/writemoney"
+             android:layout_marginTop="15dp"
+             android:layout_marginLeft="5dp"
+             android:text="充值方式"
+             android:textColor="#000"
+             android:textSize="20dip" />
+      <RelativeLayout
+	    android:id="@+id/zhifubao"
+	    android:layout_width="fill_parent"
+	    android:layout_height="50dip"
+	    android:layout_below="@+id/textviewzhifubao"
+	    android:layout_marginTop="10dp"
+	    android:background="#fff" >
+
+	    <TextView
+	        android:id="@+id/chargetext"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+	        android:layout_centerVertical="true"
+	         android:gravity="center"
+	        android:drawableLeft="@drawable/zhifubao"
+	        android:textSize="15dip"
+	        android:text="支付宝"
+	        android:textColor="#000" />
+
+	    <RadioButton
+	        android:id="@+id/alipay"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerVertical="true"
+	        android:layout_marginRight="10dp"
+	        android:checked="true"
+	        android:layout_alignParentRight="true" >
+	    </RadioButton>
+	    
+	</RelativeLayout> 
+	  <TextView
+             android:id="@+id/takecare"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="10dp"
+             android:layout_marginLeft="5dp"
+             android:layout_below="@+id/zhifubao"
+             android:text="注意：一元等于100易充币，充值的金额不能提现不能退款"
+             android:textColor="#B22222"
+             android:textSize="15dip" />
+	<Button 
+      android:id="@+id/realchargemoney"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/takecare"
+        android:onClick="pay"
+        android:text="立即充值"
+        android:background="@drawable/orderrightnow"
+        android:textSize="20dp" />
+
+ </RelativeLayout>

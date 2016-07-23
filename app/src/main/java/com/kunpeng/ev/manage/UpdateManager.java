@@ -188,7 +188,7 @@ public class UpdateManager {
 
 	private JSONObject checkVersionQuery() throws Exception {
 		// TODO Auto-generated method stub
-		String url = HttpUtil.TEST_BASE_URL+"GetVersionCheck" ;
+		String url = HttpUtil.OLD_URL +"GetVersionCheck" ;
 		return new JSONObject(HttpUtil.getRequest(url));
 	}
 

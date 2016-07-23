@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/order"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eee">
+
+    <RelativeLayout 
+       android:id="@+id/title"
+       android:layout_width="match_parent"
+       android:layout_height="50dp"
+       android:background="@color/blue">
+       
+        <RelativeLayout 
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:onClick="back"
+            >
+            
+            <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="21dp"
+            android:src="@drawable/icon_back" />
+        </RelativeLayout>
+
+         <TextView
+             android:id="@+id/textview0"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerHorizontal="true"
+             android:layout_centerVertical="true"
+             android:text="预约"
+             android:textColor="#F4F4F4"
+             android:textSize="20dip" />
+         
+
+     </RelativeLayout>
+     <RelativeLayout
+        android:id="@+id/choose"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="0dp"
+        android:gravity="center"
+        android:layout_height="100dp"
+        android:layout_width="match_parent">
+
+    <Button
+        android:id="@+id/choose1"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="28dp"
+        android:background="@drawable/button_select"
+        android:text="开始时间"
+        android:textColor="#fff"
+        android:textSize="20dp" />
+    <RelativeLayout  
+        android:id = "@+id/timechoose"
+        android:layout_width = "135dp"     
+        android:layout_height = "60dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/choosetime">
+
+        <ImageView
+            android:id="@+id/dropdown"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/dropdown" />
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/dropdown"
+            android:text="0小时"
+            android:textColor="#fff"
+            android:textSize="25dp" />
+        
+    </RelativeLayout>
+    <TextView  
+        android:id = "@+id/spinnertime" 
+        android:layout_below="@+id/timechoose"   
+        android:layout_width = "wrap_content"     
+        android:layout_height = "wrap_content" 
+        android:layout_marginTop="2dp" 
+        android:layout_marginLeft="20dp"
+        android:textSize="15dp"   
+        android:text = "预约时间不得超过6小时"    />
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/middle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/choose" 
+        android:background="#fff">
+
+        <TextView
+            android:id="@+id/textview1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:text="预约开始时间："
+            android:textColor="#000" />
+        <EditText 
+        android:id="@+id/inputDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/textview1"
+        android:layout_alignBottom="@+id/textview1"
+        android:layout_marginTop="12dp"
+        android:background="#fff"
+        android:textSize="17dp"
+        android:textColor="#EEAD0E"
+        android:focusable="false"
+        android:inputType="none"/>
+       
+        
+        <TextView
+            android:id="@+id/textview2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textview1" 
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:text="预约时间长度："
+            android:textColor="#000" />
+        <TextView
+            android:id="@+id/textview22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/textview2"
+            android:layout_alignTop="@+id/textview2"
+            android:layout_alignRight="@+id/inputDate"
+            android:layout_marginLeft="2dp"
+            android:textColor="#EEAD0E"
+            android:textSize="20dp"
+            android:text="0小时" />
+
+        <TextView
+            android:id="@+id/textview3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textview2"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="2dp"
+            android:textSize="20dp"
+            android:text="预约费用："
+            android:textColor="#000" />
+        <TextView
+            android:id="@+id/textview33"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_alignRight="@+id/inputDate"
+            android:layout_below="@+id/textview2"
+            android:layout_toRightOf="@+id/textview3"
+            android:layout_marginTop="10dp"
+            android:textColor="#FF0000"
+            android:textSize="20dp"
+            android:text="0元"
+             />
+        
+
+        <TextView
+            android:id="@+id/textview_sectionid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textview3"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:text="电桩编号："
+            android:textColor="#000" />
+        
+         <TextView
+            android:id="@+id/textview_sectionid4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/textview_sectionid"
+            android:layout_alignTop="@+id/textview_sectionid"
+            android:layout_marginLeft="2dp"
+            android:textSize="20dp"
+            android:text="" />
+      <TextView 
+          android:id="@+id/textview_address"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/textview_sectionid"
+          android:layout_marginLeft="2dp"
+          android:layout_marginTop="10dp"
+          android:textSize="20dp"
+          android:text="电桩地址："
+          android:textColor="#000"/>
+           <TextView
+            android:id="@+id/textview_address5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/textview_address"
+            android:layout_alignTop="@+id/textview_address"
+            android:layout_marginLeft="2dp"
+            android:textSize="20dp"
+            android:text="" />
+          
+ 
+        
+    </RelativeLayout>
+    
+    
+  <Button 
+      android:id="@+id/ordernow"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/middle"
+        android:text="立即预约"
+        android:background="@drawable/orderrightnow"
+        android:textSize="20dp" />
+		    
+           
+
+</RelativeLayout>
+
+     
+    

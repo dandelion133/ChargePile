@@ -27,10 +27,12 @@
         android:orientation="horizontal"
         >
         <LinearLayout
+            android:id="@+id/my_appointment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_weight="1"
+            android:background="@drawable/bg_moreinfo"
             >
             <ImageView
                 android:layout_width="wrap_content"
@@ -46,10 +48,12 @@
                 />
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/my_order"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_weight="1"
+            android:background="@drawable/bg_moreinfo"
             >
             <ImageView
                 android:layout_width="wrap_content"
@@ -65,10 +69,12 @@
                 />
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/my_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_weight="1"
+            android:background="@drawable/bg_moreinfo"
             >
             <ImageView
                 android:layout_width="wrap_content"
@@ -84,10 +90,12 @@
                 />
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/my_account"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_weight="1"
+            android:background="@drawable/bg_moreinfo"
             >
             <ImageView
                 android:layout_marginTop="10dp"
@@ -100,7 +108,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="我的预约"
+                android:text="我的账户"
                 android:layout_gravity="center"
                 />
         </LinearLayout>

@@ -2,7 +2,11 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+
+    >
 
     <RelativeLayout
         android:id="@+id/map_title"
@@ -72,5 +76,164 @@
         android:layout_marginBottom="60dp"
         android:layout_marginLeft="20dp"
         />
+
+
+    <RelativeLayout
+        android:id="@+id/marklayout"
+        android:layout_width="240dp"
+        android:layout_height="210dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/location_tips"
+        android:visibility="gone"
+        >
+        <RelativeLayout
+            android:id="@+id/ev_title"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" >
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="title"
+                android:textColor="#fff" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view_bar_title"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/ev_title"
+            android:background="#5CACEE" />
+
+        <RelativeLayout
+            android:id="@+id/ev_description"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignLeft="@+id/view_bar_title"
+            android:layout_below="@+id/view_bar_title" >
+
+            <RelativeLayout
+                android:id="@+id/ev_data_description"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true" >
+
+
+
+                <RelativeLayout
+                    android:id="@+id/address_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true">
+
+                    <TextView
+                        android:id="@+id/textView_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="2dp"
+                        android:text="地址"
+                        android:textColor="#fff" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/status_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/address_title" >
+
+                    <TextView
+                        android:id="@+id/textView_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="2dp"
+                        android:text="空闲桩数"
+                        android:textColor="#fff" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/ev_data_description"
+                android:src="@drawable/evfigure1" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view_bar_button"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/ev_description"
+            android:background="#5CACEE" />
+
+
+        <LinearLayout
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignLeft="@+id/view_bar_button"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/view_bar_button" >
+
+            <RelativeLayout
+                android:id="@+id/navigation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/button_navigation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+
+                    android:layout_alignLeft="@+id/button_devide_bar"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@+id/button_devide_bar"
+                    android:background="@drawable/button_style_nomal_blue"
+                    android:paddingRight="10dp"
+                    android:text="导航"
+                    android:textColor="#fff" />
+
+                <View
+                    android:id="@+id/button_devide_bar"
+                    android:layout_width="0.5dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:background="#fff" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/order"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="match_parent" >
+
+                <Button
+                    android:id="@+id/button_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/button_style_nomal_blue"
+                    android:text="查看详情"
+                    android:textColor="#fff" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
 
 </RelativeLayout>

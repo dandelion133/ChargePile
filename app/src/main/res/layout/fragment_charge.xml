@@ -3,7 +3,9 @@
               xmlns:app="http://schemas.android.com/apk/res-auto"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent"
+    android:id="@+id/main"
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,6 +30,7 @@
             android:layout_marginLeft="15dp"
             />
         <ImageView
+            android:id="@+id/scan_code"
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="150dp"
@@ -51,7 +54,8 @@
             android:layout_marginTop="20dp"
             >
             <Button
-                android:visibility="gone"
+                android:id="@+id/input_pile_num"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="点击输入电桩编号"
@@ -64,6 +68,8 @@
                 android:orientation="horizontal"
                 >
                 <EditText
+                    android:visibility="gone"
+                    android:id="@+id/et_num_pile"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:hint="输入电桩编号"
@@ -74,6 +80,8 @@
                     android:layout_weight="1"
                     />
                 <Button
+                    android:visibility="gone"
+                    android:id="@+id/ok"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bg_button"
@@ -93,6 +101,7 @@
                 android:gravity="center"
                 >
                 <ImageView
+                    android:id="@+id/iv_mode"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/mode"

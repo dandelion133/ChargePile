@@ -19,6 +19,11 @@
     <color name="green">#89d942</color>
     <color name="income_background">#782345</color>
 
-    <color name="button_focus">@color/drak_blue</color>
+    <color name="button_focus">@color/grey_pale</color>
     <color name="button_normal">@color/blue</color>
+
+    <color name="result_view">#b0000000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="province_line_border">#C7C7C7</color>
 </resources>

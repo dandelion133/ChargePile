@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#eee" >
+
+    <RelativeLayout
+        android:id="@+id/title_zhifu"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/blue" >
+        
+        <RelativeLayout 
+            android:id="@+id/backtomygoods"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:onClick="payback"
+            >
+            
+            <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="21dp"
+            android:src="@drawable/icon_back" />
+        </RelativeLayout>
+
+       <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_centerHorizontal="true"
+         android:layout_centerVertical="true"
+         android:textSize="20dip"
+         android:text="充值"
+         android:textColor="#F4F4F4"/>
+     </RelativeLayout>
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="com.kunpeng.ev.fragment.ExternalFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

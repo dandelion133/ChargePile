@@ -55,8 +55,8 @@ public class LoginActivity extends Activity {
         }
 
     };
-
-
+  //  BaseAdapter
+//SimpleAdapter
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -87,8 +87,6 @@ public class LoginActivity extends Activity {
             cbRemenberPwd.setChecked(true);
             userAcountEt.setText(spUser.getString("userAccount", ""));
             userPwdEt.setText(spUser.getString("userPassword",""));
-
-
 
         } else {
             userAcountEt.setText(spUser.getString("userAccount", ""));
@@ -211,7 +209,7 @@ public class LoginActivity extends Activity {
         map.put("password", password);
         Log.e("LoginActivity", "名称  密码" + username + password);
 
-        String url= HttpUtil.TEST_BASE_URL+"loginAction";
+        String url= HttpUtil.OLD_URL +"loginAction";
         Log.e("LoginActivity", url);
 
         return new JSONObject(HttpUtil.postRequest(url, map));

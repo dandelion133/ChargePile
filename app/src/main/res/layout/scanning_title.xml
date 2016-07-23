@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="50dp"
+    android:background="@color/blue" >
+
+    <RelativeLayout 
+        android:id="@+id/scanning"
+	    android:layout_width="fill_parent"
+	    android:layout_height="50dp"
+	    android:orientation="horizontal"
+	    android:background="@color/blue">
+
+        <RelativeLayout 
+            android:id="@+id/scanning_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:onClick="scanningback">
+            
+            <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="21dp"
+            android:src="@drawable/icon_back" />
+        </RelativeLayout>
+        
+        <RelativeLayout 
+            android:id="@+id/individual_title"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/individual_edit"
+            android:layout_toRightOf="@+id/scanning_back">
+            
+            <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textSize="20dip"
+            android:text="扫描中"
+            android:textColor="#fff" />
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/individual_edit"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true" >
+            
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

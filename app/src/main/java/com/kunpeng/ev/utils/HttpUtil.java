@@ -1,5 +1,8 @@
 package com.kunpeng.ev.utils;
 
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.util.Log;
 
 import org.apache.http.HttpEntity;
@@ -31,11 +34,21 @@ public class HttpUtil {
     //发布服务器的基本地址
     //public static final String BASE_URL = "http://123.56.207.237/UnionPay/";
     //测试服务器的基本地址
-    public static final String TEST_BASE_URL =
+    public static final String OLD_URL =
            // "http://open.companiontek.com/UnionPay/";
-             "http://139.129.201.20/NewChargePile/";
+             //"http://139.129.201.20/NewChargePile/";
+            "http://139.129.201.20/NewChargePile/";
+
+    public static final String MEVEN_URL =
+            // "http://open.companiontek.com/UnionPay/";
+            //"http://139.129.201.20/NewChargePile/";
+            "http://chargerpile.companiontek.com/";
+
+
 
     public static String ENCODING = "UTF8";
+
+
 
     /**
      * @param url 发送请求的URL
@@ -182,6 +195,26 @@ public class HttpUtil {
         new Thread(task).start();
         return task.get();
     }
+
+
+
+
+
+    //离网判断
+    public static boolean isNetworkConnected(Context context) {
+        if (context != null) {
+            ConnectivityManager mConnectivityManager = (ConnectivityManager) context
+                    .getSystemService(Context.CONNECTIVITY_SERVICE);
+            NetworkInfo mNetworkInfo = mConnectivityManager.getActiveNetworkInfo();
+            if (mNetworkInfo != null) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+
 
 
 }
